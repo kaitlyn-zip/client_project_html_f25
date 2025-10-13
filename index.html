@@ -8,6 +8,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MSI Career Development Resource Hub</title>
+
+  <link rel="stylesheet" href="css/html5reset.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 
@@ -17,28 +20,16 @@
 
   <header>
     <a href="#main-content">Skip to Main Content</a>
-    <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo" width="100">
-
-
-    <!-- Original nav bar with list format - commented out just in case for future edits -->
-    <!-- <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="resume.html">Resumes</a></li>
-            <li><a href="networking.html">Networking & Connections</a></li>
-            <li><a href="interviews.html">Acing Your Interviews</a></li>
-        </ul>
-    </nav> -->
+    <img src="images/UMSI_logo-header.png" alt="UMSI Logo" id="umsi-logo">
 
     <nav>
-      <a href="index.html" class="active">Home</a> |
-      <a href="resume.html">Resumes</a> |
-      <a href="networking.html">Networking & Connections</a> |
+      <a href="index.html" class="active">Home</a>
+      <a href="resume.html">Resumes</a>
+      <a href="networking.html">Networking & Connections</a>
       <a href="interviews.html">Acing Your Interviews</a>
     </nav>
 
     <h1>Welcome to the UMSI Career Development Resource Hub</h1>
-    <hr>
   </header>
 
 
@@ -48,7 +39,8 @@
 
     <section>
       <img src="images/StartYourJourney_Banner.png"
-        alt="A banner that says 'Start Your Journey' with a picture of a student sitting outside." width="746">
+        alt="A banner that says 'Start Your Journey' with a picture of a student sitting outside."
+        id="start-your-journey-banner">
       <h2>Your Central Hub for Career Success at UMSI</h2>
       <p>
         Ready to take the next step toward your future career? The UMSI Career Development Resource Hub is your one-stop
@@ -56,10 +48,12 @@
         job-seeker. Whether you are just starting your exploration or getting ready to launch your career, you will find
         everything you need, organized for you.
       </p>
-      <iframe width="746" height="420" src="https://www.youtube.com/embed/GSjGeDYJ5Nk?si=qhxJPRTIT___x8hG"
-        title="YouTube video player"
+
+      <iframe id="youtube-video" src="https://www.youtube.com/embed/GSjGeDYJ5Nk?si=qhxJPRTIT___x8hG"
+        title="UMSI Sumemr Internship Experience"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
     </section>
 
 
@@ -117,15 +111,16 @@
 
     <br><br>
     <section>
-      <h2>Start Here</h2>
       <div>
         <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="A student wears a UMSI backpack in fall on the drag."
-          width="746">
+          class="single-image">
+        <h2>Start Here!</h2>
         <ul>
           <li><a href="resume.html">Resumes</a></li>
           <li><a href="networking.html">Networking & Connections</a></li>
-          <li><a>Career Exploration</a></li>
-          <li><a>Talk to a Career Coach</a></li>
+          <li><a href="interviews.html">Interview Preparation</a></li>
+          <li><a href="https://umich.instructure.com/courses/137916/pages/talk-to-a-career-coach">Talk to a Career
+              Coach</a></li>
         </ul>
       </div>
 
@@ -178,7 +173,6 @@
 
 
   <footer>
-    <hr>
     <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career
         Development Office </a></p>
     <p>Contact | <a href="mailto:umsi.careers@umich.edu?subject=Hello">umsi.careers@umich.edu</a></p>
