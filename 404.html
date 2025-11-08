@@ -29,23 +29,23 @@
         <h1>Oops! The page you're looking for doesn't exist</h1>
     </header>
 
-    <div class="error-404-container">
-        <img src="images/Squirrel_404_Graphic.png" alt="A squirrel standing in front of the numbers 404" />
-        <a href="/">Go back home</a>
-    </div>
+    <main>
+        <div class="error-404-container">
+            <img src="images/Squirrel_404_Graphic.png" alt="A squirrel standing in front of the numbers 404" />
+            <a href="/">Go back home</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career
+                Development Office </a></p>
+        <p>Contact | <a href="mailto:umsi.careers@umich.edu?subject=Hello">umsi.careers@umich.edu</a></p>
+        <p>© Copyrights <span id="year"></span> by University of Michigan. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+
 </body>
-
-
-<footer>
-    <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career
-            Development Office </a></p>
-    <p>Contact | <a href="mailto:umsi.careers@umich.edu?subject=Hello">umsi.careers@umich.edu</a></p>
-    <p>© Copyrights <span id="year"></span> by University of Michigan. All rights reserved.</p>
-</footer>
-
-<script>
-    document.getElementById("year").innerHTML = new Date().getFullYear();
-</script>
-
-</main>
 </html>
