@@ -1,2 +1,2 @@
-# Client_Project_Starter_Code
-Starter code for the Fall 2025 & Winter 2026 Client Project
+# Client Project HTML Fall 2025 - SI 539
+This is the repository for the client website project for SI 539 (Fall 2025)
