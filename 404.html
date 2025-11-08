@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found</title>
+
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+
+
+<body>
+
+    <header>
+        <a href="#main-content">Skip to Main Content</a>
+        <div class="logo-container">
+            <img src="images/UMSI_logo-header.png" alt="UMSI Logo" id="umsi-logo">
+        </div>
+
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="resume.html">Resumes</a>
+            <a href="networking.html">Networking & Connections</a>
+            <a href="interviews.html">Acing Your Interviews</a>
+        </nav>
+
+        <h1>Oops! The page you're looking for doesn't exist</h1>
+    </header>
+
+    <div class="error-404-container">
+        <img src="/images/Squirrel_404_Graphic.png" alt="A squirrel standing in front of the numbers 404" />
+        <a href="/">Go back home</a>
+    </div>
+</body>
+
+
+</html>
+<footer>
+    <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career
+            Development Office </a></p>
+    <p>Contact | <a href="mailto:umsi.careers@umich.edu?subject=Hello">umsi.careers@umich.edu</a></p>
+    <p>© Copyrights <span id="year"></span> by University of Michigan. All rights reserved.</p>
+</footer>
+
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+</main>

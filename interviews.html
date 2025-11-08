@@ -17,13 +17,15 @@
 
 
 <body>
-
+    <div class="scroll-progress"></div>
 
 
 
     <header>
         <a href="#main-content">Skip to Main Content</a>
-        <img src="images/UMSI_logo-header.png" alt="UMSI Logo" id="umsi-logo">
+        <div class="logo-container">
+            <img src="images/UMSI_logo-header.png" alt="UMSI Logo" id="umsi-logo">
+        </div>
 
 
         <nav>
@@ -74,7 +76,7 @@
                     interviewer.<br></li>
             </ul>
         </section>
-        <br><br>
+        <br>
 
 
         <section>
@@ -82,7 +84,7 @@
             <p><strong>STAR</strong> = <em>Situation</em>, <em>Task</em>, <em>Action</em>, <em>Result</em>.</p>
             <p><strong>CAR</strong> = <em>Context</em>, <em>Action</em>, <em>Result</em>, <em>Result</em>.</p>
         </section>
-        <br><br>
+        <br>
 
 
         <section>
@@ -118,7 +120,7 @@
             </details><br>
         </section>
 
-
+        <br>
         <section aria-label="Final tip"> <!-- Aria Label added because no visible header -->
             <p><strong>Final Tip:</strong> Interviews reward preparation. Focus on a few excellent stories, align
                 them to the role, and rehearse out loud. Clarity beats complexity every time.</p>
@@ -212,11 +214,25 @@
                 Career
                 Development Office </a></p>
         <p>Contact | <a href="mailto:umsi.careers@umich.edu?subject=Hello">umsi.careers@umich.edu</a></p>
+        <p>© Copyrights <span id="year"></span> by University of Michigan. All rights reserved.</p>
     </footer>
 
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 
 
 
+    <!-- SCROLL PROGRESS BAR SCRIPT -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const scrollProgress = document.querySelector('.scroll-progress');
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = (scrollTop / scrollHeight) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        });
+    </script>
 </body>
 
 </html>

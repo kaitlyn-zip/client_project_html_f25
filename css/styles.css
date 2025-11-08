@@ -12,7 +12,7 @@ html {
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
@@ -51,43 +51,51 @@ body {
     HEADER & NAV BAR
    =================================== */
 header {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #00274C;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #00274C;
 }
 
 nav {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
-  gap: 0.5rem;
-  padding: 5%;
-  margin: 0;
-  width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: 0.5rem;
+    padding: 5%;
+    margin: 0;
+    width: 100%;
 }
 
 nav a {
-  padding: 0.75rem 1rem;
-  text-decoration: none;
-  background-color: #00274C;
-  color: white;
-  text-align: center;
-  border-radius: 4px;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    background-color: #00274C;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
 }
 
 nav a:hover,
 nav a:focus {
-  background-color: #FFCB05;
-  color: #00274C;
+    background-color: #FFCB05;
+    color: #00274C;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 nav a.active {
-  background-color: #FFCB05;
-  color: #00274C;
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
+    background-color: #FFCB05;
+    color: #00274C;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
+
+nav a,
+a {
+    transition: all 0.3s ease;
+}
+
 
 
 
@@ -99,10 +107,13 @@ nav a.active {
 /* UMSI logo Image */
 #umsi-logo {
     display: block;
+    max-width: 100%;
+    padding: 5% 5% 5% 5%;
     margin: 0 auto;
-    height: auto;
+}
+
+.logo-container {
     background-color: #EDECEC;
-    padding: 10% 7% 8% 7%;
     width: 100%;
     border-bottom: 7px solid #bbbbbb;
 }
@@ -153,6 +164,13 @@ figure img {
     height: auto;
     border-radius: 4px;
     box-shadow: 0 2px 8px rgba(0, 39, 76, 0.15);
+    align-self: center;
+
+    transition: transform 0.3s ease;
+}
+
+figure img:hover {
+    transform: scale(1.05);
 }
 
 
@@ -160,7 +178,9 @@ figure img {
 
 
 /* Headings */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: bold;
     text-align: center;
     padding: 5%;
@@ -168,10 +188,11 @@ h1, h2, h3 {
 
 
 h1 {
-    color: #FFCB05;
+    color: #00274C;
+    background-color: #EDECEC;
     font-size: 2rem;
     line-height: 110%;
-    padding: 5% 0 10% 0
+    padding: 5% 0 5% 0
 }
 
 
@@ -208,7 +229,8 @@ a {
     text-decoration: underline;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
     color: #FFCB05;
 }
 
@@ -216,9 +238,11 @@ a:hover, a:focus {
 
 
 /* List Styling */
-ol, ul, summary {
+ol,
+ul,
+summary {
     margin: .5rem 0;
-    padding-left: 2rem;
+    padding-left: 3rem;
 }
 
 summary {
@@ -326,6 +350,158 @@ footer a:focus {
 
 
 
+
+/* ===================================
+   SCROLL PROGRESS BAR
+   =================================== */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, #FFCB05 0%, #00274C 100%);
+    z-index: 9999;
+    transition: width 0.1s ease;
+}
+
+
+
+
+
+
+
+
+
+
+/* ===================================
+   MEDIA QUERY FOR DESKTOP VIEW
+   =================================== */
+@media (min-width: 1024px) {
+    html {
+        font-size: 19px;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 0 2rem 0;
+    }
+
+    nav {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 5%;
+        gap: 1rem;
+    }
+
+    nav a {
+        padding: 0.5rem 1 rem;
+    }
+
+
+
+    section ul,
+    section ol {
+        column-count: 2;
+        column-gap: 3rem;
+    }
+
+    li {
+        break-inside: avoid;
+    }
+
+    .interview-resources {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+
+    h1,
+    h2,
+    h3 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+
+    p {
+        max-width: 1200px;
+        margin: 0 0 30px 0;
+        padding-left: 38px;
+    }
+
+    .single-image {
+        width: 100%;
+        display: block;
+        padding: 3%;
+        border-left: 5px solid #FFCB05;
+        background-color: #FFFFFF;
+    }
+
+
+    /* Logo readjustment */
+    #umsi-logo {
+        display: block;
+        max-width: 100%;
+        padding: 2% 30% 2% 30%;
+        margin: 0 auto;
+    }
+
+
+    details {
+        max-width: 900px;
+    }
+
+    footer {
+        margin-top: 0;
+    }
+
+    footer p {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* ===================================
+   404 STYLING
+   =================================== */
+
+.error-404-container img {
+    width: 50%;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.error-404-container a {
+    display: block;
+    margin: 2rem 30%;
+    padding: 1rem 2rem;
+    background-color: #00274C;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.error-404-container a:hover,
+.error-404-container a:focus {
+    background-color: #FFCB05;
+    color: #00274C;
+}
 
 
 
